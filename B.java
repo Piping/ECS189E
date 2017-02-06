@@ -52,17 +52,17 @@ public class B extends Canvas {
 				for (int i = 0; i < SCALE; i++) {
 					for (int j = 0; j < SCALE; j++) {
 						g.drawLine(SCALE*x + i, SCALE*y + j, SCALE*x + i, SCALE*y + j);
-					}	
+					}
 				}
 			}
 		}
 	}
 
-	private float fromValue(double value) {
-		return (float) (((300 * (1.0 - value) + 300) % 360) / 360.0);
-	}
-
 	private Color color(double value) {
 		return Color.getHSBColor(fromValue(value), 1.0f, .5f);
+	}
+
+	private float fromValue(double value) {
+		return (float) (((300 * (1.0 - value) + 300) % 360) / 360.0);
 	}
 }
